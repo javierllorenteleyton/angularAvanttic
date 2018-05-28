@@ -1,6 +1,8 @@
 //Install express server
+// $ npm install --save opn
 const express = require('express');
 const path = require('path');
+const opn = require('opn');
 
 const app = express();
 
@@ -16,4 +18,5 @@ res.sendFile(path.join(__dirname+'/dist/index.html'));
 //app.listen(process.env.PORT || 8080);
 app.listen(8080,function() {
     console.log("Servidor corriendo en http://localhost:8080");
+	opn('http://localhost:8080');
 });
