@@ -1,5 +1,6 @@
 //Install express server
-// $ npm install --save opn
+// $ npm install --save opn abre la applicación 
+// $ nom install --save express
 const express = require('express');
 const path = require('path');
 const opn = require('opn');
