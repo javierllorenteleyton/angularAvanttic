@@ -27,4 +27,8 @@ export class AlumnoService {
          ];
          return this.listAlumnos;
      }
+     addAlumno(alumno:Alumno){
+        this.listAlumnos = [...this.listAlumnos, alumno];
+    }
+
 }

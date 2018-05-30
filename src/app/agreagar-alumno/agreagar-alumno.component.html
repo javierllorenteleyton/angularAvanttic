@@ -1,21 +1,21 @@
 <div class="container">
    <h1>Formulario Alumno</h1>
-   <form #alumonoForm="ngForm">
+   <form #alumonoForm="ngForm" >
         <div class="form-group">
           <label form="nombre">Nombre</label>
-          <input type="text" class="form-control" id="nombre" [ngModel]="alumno.nombre" required name="nombre">
+          <input type="text" class="form-control" id="nombre" [(ngModel)]="alumno.nombre" required name="nombre">
         </div>
         <div class="form-group">
             <label form="apellidos">Apellidos</label>
-            <input type="text" class="form-control" id="apellidos" [ngModel]="alumno.apellidos" required name="apellidos">
+            <input type="text" class="form-control" id="apellidos" [(ngModel)]="alumno.apellidos" required name="apellidos">
           </div>
           <div class="form-group">
               <label form="dni">Dni</label>
-              <input type="text" class="form-control" id="dni" [ngModel]="alumno.dni" required name="dni">
+              <input type="text" class="form-control" id="dni" [(ngModel)]="alumno.dni" required name="dni">
             </div>
             <div class="form-group text-center">
               <div class="input-group" style="margin:auto;">
-                <button type="button" (click)="add();" class="btn">Submit</button>
+                <button type="button" (click)="add()" class="btn">Submit</button>
 
               </div>
             </div>
