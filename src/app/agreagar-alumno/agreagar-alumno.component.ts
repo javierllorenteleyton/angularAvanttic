@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Alumno } from '../alumno/Alumno';
 import { AlumnoService } from '../alumno/alumno.service';
-import { Router,ActivatedRoute,ParamMap } from '@angular/router';
 import { switchMap } from 'rxjs/operators';
 @Component({
   selector: 'app-agreagar-alumno',
@@ -11,10 +10,8 @@ import { switchMap } from 'rxjs/operators';
 export class AgreagarAlumnoComponent implements OnInit {
   id: number;
   nombre: string;
-  private sub: any;
   alumno= new Alumno("","","");
-  constructor(  private route: ActivatedRoute,
-    private router: Router,private alumnoservice: AlumnoService) { }
+  constructor( private alumnoservice: AlumnoService) { }
 
   ngOnInit() {
    

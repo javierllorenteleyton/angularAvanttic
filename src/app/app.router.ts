@@ -7,6 +7,7 @@ import { AddStudentComponentComponent } from './add-student-component/add-studen
 import { ProductComponent } from './product/product.component';
 import { AlumnoComponent } from './alumno/alumno.component';
 import { AgreagarAlumnoComponent } from './agreagar-alumno/agreagar-alumno.component';
+import { ModificarAlumnoComponent } from './modificar-alumno/modificar-alumno.component';
 
 export const appRoutes: Routes = [
     {path: '',redirectTo: 'calculadora',pathMatch: 'full'},
@@ -14,8 +15,9 @@ export const appRoutes: Routes = [
     {path: 'add-student', component: AddStudentComponentComponent },
     {path: 'add-product', component: ProductComponent },
     {path: 'alumno', children: [{ path:'',component: AlumnoComponent},
-    {path: 'agregar-alumno/:alumno', component: AgreagarAlumnoComponent }] },
+    {path: 'modificar-alumno', component: ModificarAlumnoComponent }] },
     {path: 'agregar-alumno', component: AgreagarAlumnoComponent },
+    {path: 'modificar-alumno', component: ModificarAlumnoComponent }
 
 ];
 

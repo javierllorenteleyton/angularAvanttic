@@ -49,8 +49,11 @@ export class AlumnoService {
     mod(id: number ,alumno : Alumno) {
         for(var  i=0; i < this.listAlumnos.length;i++) {
            if (i== id) {
-            this.listAlumnos.splice(i,1);
-           }
+            this.listAlumnos[i].nombre=alumno.nombre;
+
+            this.listAlumnos[i].dni=alumno.dni;
+            this.listAlumnos[i].apellidos=alumno.apellidos;
+                }
         }
     }
 }

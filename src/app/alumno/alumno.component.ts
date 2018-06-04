@@ -28,6 +28,6 @@ export class AlumnoComponent implements OnInit {
   }
   goToAlumnoDetails(id: number) {
     this.alumnoservice.id=id;
-    this.router.navigate(['/agregar-alumno']);
+    this.router.navigate(['modificar-alumno']);
   }
 }
