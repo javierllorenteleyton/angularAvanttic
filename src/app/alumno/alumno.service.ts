@@ -44,7 +44,7 @@ export class AlumnoService {
            }
         }
     }
-    mod(id: number ,alumno : Alumno) {
+    modAlumno(id: number ,alumno : Alumno) {
         for(var  i=0; i < this.listAlumnos.length;i++) {
            if (i== id) {
             this.listAlumnos[i].nombre=alumno.nombre;

@@ -9,8 +9,6 @@ import { Location } from '@angular/common';
 })
 export class ModificarAlumnoComponent implements OnInit {
   id: number;
-  nombre: string;
-  private sub: any;
   alumno: Alumno;
   constructor( private location: Location,private alumnoservice: AlumnoService) { }
 
@@ -24,7 +22,7 @@ export class ModificarAlumnoComponent implements OnInit {
    public mod() {
      console.log("Entra en el modo mod");
      console.log("Add alumno" + this.alumno.nombre);
-     this.alumnoservice.addAlumno(this.alumno);
+     this.alumnoservice.modAlumno( this.alumnoservice.id,this.alumno);
    }
    goBack(): void {
     this.location.back();

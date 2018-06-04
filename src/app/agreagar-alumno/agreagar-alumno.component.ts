@@ -7,15 +7,10 @@ import { AlumnoService } from '../alumno/alumno.service';
   styleUrls: ['./agreagar-alumno.component.css']
 })
 export class AgreagarAlumnoComponent implements OnInit {
-  id: number;
-  nombre: string;
   alumno= new Alumno("","","");
   constructor( private alumnoservice: AlumnoService) { }
 
   ngOnInit() {
-   
-   
-   
 
   }
 
