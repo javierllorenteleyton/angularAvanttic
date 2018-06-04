@@ -13,7 +13,8 @@ export const appRoutes: Routes = [
     {path: 'calculadora',component: CalculadoraComponent},
     {path: 'add-student', component: AddStudentComponentComponent },
     {path: 'add-product', component: ProductComponent },
-    {path: 'alumno', component: AlumnoComponent },
+    {path: 'alumno', children: [{ path:'',component: AlumnoComponent},
+    {path: 'agregar-alumno/:alumno', component: AgreagarAlumnoComponent }] },
     {path: 'agregar-alumno', component: AgreagarAlumnoComponent },
 
 ];

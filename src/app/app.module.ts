@@ -6,13 +6,14 @@ import { AppComponent } from './app.component';
 import { CalculadoraComponent } from './calculadora/calculadora.component';
 import { FormsModule } from '@angular/forms';
 import { AddStudentComponentComponent } from './add-student-component/add-student-component.component'; // <-- NgModel lives here
-
+import { AlumnoService } from '../app/alumno/alumno.service';
 import { StudentService }    from '../app/shared/Student.Service';
 import { ProductService }    from '../app/shared/Product.Service';
 import { ProductComponent } from './product/product.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AlumnoComponent } from './alumno/alumno.component';
 import { AgreagarAlumnoComponent } from './agreagar-alumno/agreagar-alumno.component';
+import { ModificarAlumnoComponent } from './modificar-alumno/modificar-alumno.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { AgreagarAlumnoComponent } from './agreagar-alumno/agreagar-alumno.compo
     AddStudentComponentComponent,
     ProductComponent,
     AlumnoComponent,
-    AgreagarAlumnoComponent
+    AgreagarAlumnoComponent,
+    ModificarAlumnoComponent
   ],
   imports: [
     BrowserModule,
@@ -29,7 +31,7 @@ import { AgreagarAlumnoComponent } from './agreagar-alumno/agreagar-alumno.compo
     FormsModule,
     routing
   ],
-  providers: [StudentService,ProductService],
+  providers: [StudentService,ProductService,AlumnoService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

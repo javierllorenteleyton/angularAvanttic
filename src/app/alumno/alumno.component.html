@@ -10,12 +10,18 @@
             </tr>
           </thead>
           <tbody>
-            <tr *ngFor="let alumno of listAlumnos">
+            <tr *ngFor="let alumno of listAlumnos; let id = index">
               <td>{{alumno.nombre}}</td>
               <td>{{alumno.apellidos}}</td>
               <td>{{alumno.dni}}</td>
+              <td> <button type="button" (click)="goToAlumnoDetails(id)" class="btn">update</button></td>
+              <td><button type="button" (click)="delete(alumno)" class="btn">delete</button></td>              
             </tr>
           </tbody>
       </table>
+  </div>
+  <button type="button" (click)="refreshAlumnos()" class="btn">Submit</button>
+  <div class="container">
+    <router-outlet></router-outlet>
   </div>
 </div>  

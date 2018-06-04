@@ -4,15 +4,15 @@ import { AlumnoService } from '../alumno/alumno.service';
 import { Router,ActivatedRoute,ParamMap } from '@angular/router';
 import { switchMap } from 'rxjs/operators';
 @Component({
-  selector: 'app-agreagar-alumno',
-  templateUrl: './agreagar-alumno.component.html',
-  styleUrls: ['./agreagar-alumno.component.css']
+  selector: 'app-modificar-alumno',
+  templateUrl: './modificar-alumno.component.html',
+  styleUrls: ['./modificar-alumno.component.css']
 })
-export class AgreagarAlumnoComponent implements OnInit {
+export class ModificarAlumnoComponent implements OnInit {
   id: number;
   nombre: string;
   private sub: any;
-  alumno= new Alumno("","","");
+  alumno: Alumno;
   constructor(  private route: ActivatedRoute,
     private router: Router,private alumnoservice: AlumnoService) { }
 
@@ -23,7 +23,7 @@ export class AgreagarAlumnoComponent implements OnInit {
 
   }
 
-   public add() {
+   public mod() {
      console.log("Entra en el modo add");
      console.log("Add alumno" + this.alumno.nombre);
      this.alumnoservice.addAlumno(this.alumno);
