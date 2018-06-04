@@ -15,7 +15,7 @@ export const appRoutes: Routes = [
     {path: 'add-student', component: AddStudentComponentComponent },
     {path: 'add-product', component: ProductComponent },
     {path: 'alumno', children: [{ path:'',component: AlumnoComponent},
-    {path: 'modificar-alumno', component: ModificarAlumnoComponent }] },
+    {path: 'modificar-alumno2', component: ModificarAlumnoComponent }] },
     {path: 'agregar-alumno', component: AgreagarAlumnoComponent },
     {path: 'modificar-alumno', component: ModificarAlumnoComponent }
 

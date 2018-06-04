@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Alumno } from '../alumno/Alumno';
 import { AlumnoService } from '../alumno/alumno.service';
-import { switchMap } from 'rxjs/operators';
 @Component({
   selector: 'app-agreagar-alumno',
   templateUrl: './agreagar-alumno.component.html',
@@ -15,8 +14,8 @@ export class AgreagarAlumnoComponent implements OnInit {
 
   ngOnInit() {
    
-   console.log("Entra en el modo update" + this.alumnoservice.id);
-   this.alumno=this.alumnoservice.getAlumno(this.alumnoservice.id);
+   
+   
 
   }
 

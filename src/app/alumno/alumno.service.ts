@@ -22,13 +22,11 @@ export class AlumnoService {
 
      public getAlumnosList(): Array<Alumno> {
         console.log("Entra en el modo get alumno"+this.listAlumnos.length);
-         return this.mockAlumnos();
+         return   this.listAlumnos;
+
      }
 
-     private mockAlumnos() : Array<Alumno> {
-       
-         return this.listAlumnos;
-     }
+     
      addAlumno(alumno:Alumno){
         console.log("Entra en el modo add alumno"+this.listAlumnos.length);
         this.listAlumnos = [...this.listAlumnos, alumno];

@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Alumno } from '../alumno/Alumno';
 import { AlumnoService } from '../alumno/alumno.service';
-import { Router,ActivatedRoute,ParamMap } from '@angular/router';
-import { switchMap } from 'rxjs/operators';
+import { Location } from '@angular/common';
 @Component({
   selector: 'app-modificar-alumno',
   templateUrl: './modificar-alumno.component.html',
@@ -13,8 +12,7 @@ export class ModificarAlumnoComponent implements OnInit {
   nombre: string;
   private sub: any;
   alumno: Alumno;
-  constructor(  private route: ActivatedRoute,
-    private router: Router,private alumnoservice: AlumnoService) { }
+  constructor( private location: Location,private alumnoservice: AlumnoService) { }
 
   ngOnInit() {
    
@@ -24,8 +22,12 @@ export class ModificarAlumnoComponent implements OnInit {
   }
 
    public mod() {
-     console.log("Entra en el modo add");
+     console.log("Entra en el modo mod");
      console.log("Add alumno" + this.alumno.nombre);
      this.alumnoservice.addAlumno(this.alumno);
    }
+   goBack(): void {
+    this.location.back();
+  }
+
 }
