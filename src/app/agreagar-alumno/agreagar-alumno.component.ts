@@ -7,11 +7,13 @@ import { AlumnoService } from '../alumno/alumno.service';
   styleUrls: ['./agreagar-alumno.component.css']
 })
 export class AgreagarAlumnoComponent implements OnInit {
-  alumno= new Alumno("","","");
+  alumno: Alumno;
+  active = true;
   constructor( private alumnoservice: AlumnoService) { }
 
   ngOnInit() {
-
+      this.alumno=new Alumno("","","");
+      this.active = true;
   }
 
    public add() {

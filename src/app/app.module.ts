@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { routing } from './app.router';
+import { HttpModule} from '@angular/http'; // hacer peticiones rest
 
 import { AppComponent } from './app.component';
 import { CalculadoraComponent } from './calculadora/calculadora.component';
@@ -14,6 +15,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { AlumnoComponent } from './alumno/alumno.component';
 import { AgreagarAlumnoComponent } from './agreagar-alumno/agreagar-alumno.component';
 import { ModificarAlumnoComponent } from './modificar-alumno/modificar-alumno.component';
+import { SearchComponent } from './search/search.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -23,13 +26,16 @@ import { ModificarAlumnoComponent } from './modificar-alumno/modificar-alumno.co
     ProductComponent,
     AlumnoComponent,
     AgreagarAlumnoComponent,
-    ModificarAlumnoComponent
+    ModificarAlumnoComponent,
+    SearchComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     FormsModule,
-    routing
+    routing,
+    HttpModule
   ],
   providers: [StudentService,ProductService,AlumnoService],
   bootstrap: [AppComponent]
